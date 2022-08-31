@@ -21,7 +21,6 @@ apiDataset ## display json file
 
 
 ## section 3
-GOOGLE_APPLICATION_CREDENTIALS = 'brittany-507-d4f0dd46a096.json'
 client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads/brittany-507-d4f0dd46a096.json') ## create bigquery client
 ## query public dataset
 query_job = client.query('SELECT * FROM `bigquery-public-data.geo_us_census_places.places_new_york` LIMIT 100') ## query public dataset
@@ -29,7 +28,7 @@ query_job = client.query('SELECT * FROM `bigquery-public-data.geo_us_census_plac
 results = query_job.result() ## get results of query
 ## putresults into dataframe
 bigquery1 = pd.DataFrame(results.to_dataframe()) ## put results into dataframe with the variable bigquery1
-client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads//brittany-507-6906018882e5.json') ## create bigquery client
+client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads/brittany-507-d4f0dd46a096.json') ## create bigquery client
 ## query public dataset
 query_job = client.query("SELECT * FROM `bigquery-public-data.genomics_cannabis.MNPR01_201703` LIMIT 100") ## query public dataset
 ## get results
