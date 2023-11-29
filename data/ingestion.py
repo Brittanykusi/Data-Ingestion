@@ -22,17 +22,17 @@ apiDataset ## display json file
 
 ## Import Data - Google Cloud bigquery
 client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads/brittany-507-d4f0dd46a096.json') ## create bigquery client
-## query public dataset
+### query public dataset
 query_job = client.query('SELECT * FROM `bigquery-public-data.geo_us_census_places.places_new_york` LIMIT 100') ## query public dataset
-## get results
+### get results
 results = query_job.result() ## get results of query
-## put results into dataframe
+### put results into dataframe
 bigquery1 = pd.DataFrame(results.to_dataframe()) ## put results into dataframe with the variable bigquery1
 client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads/brittany-507-d4f0dd46a096.json') ## create bigquery client
-## query public dataset
+### query public dataset
 query_job = client.query("SELECT * FROM `bigquery-public-data.genomics_cannabis.MNPR01_201703` LIMIT 100") ## query public dataset
-## get results
+### get results
 results = query_job.result() ## get results of query
-## putresults into dataframe
+### putresults into dataframe
 bigquery2 = pd.DataFrame(results.to_dataframe()) ## put results into dataframe with the variable bigquery1
 
