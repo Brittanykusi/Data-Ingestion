@@ -2,7 +2,7 @@
 
 ## Import dataset
 
-## Import data from json API
+## Import data - JSON API
 
 ## Import Data - Google Cloud bigquery
 
