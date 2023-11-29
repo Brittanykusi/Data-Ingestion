@@ -20,7 +20,7 @@ apiDataset = pd.read_json('https://data.cms.gov/data-api/v1/dataset/3817f5a4-bb2
 apiDataset ## display json file
 
 
-## Import Data - bigquery
+## Import Data - Google Cloud bigquery
 client = bigquery.Client.from_service_account_json('/Users/brittanykusi-gyabaah/Downloads/brittany-507-d4f0dd46a096.json') ## create bigquery client
 ## query public dataset
 query_job = client.query('SELECT * FROM `bigquery-public-data.geo_us_census_places.places_new_york` LIMIT 100') ## query public dataset
